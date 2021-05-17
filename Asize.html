@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel="stylesheet" href="Asize.css">
+</head>
+<body>
+<p id="demo"></p>
+<script>
+var var1 = setInterval(inTimer, 1000);
+var fs = 5;
+var ids = document.getElementById("demo");
+function inTimer() {
+ids.innerHTML = 'AHMEDABAD INSTITUTE OF TECHNOLOGY';
+ids.setAttribute('style', "font-size: " + fs + "px; color: red");
+fs += 8;
+if(fs >= 60 ){
+clearInterval(var1);
+var2 = setInterval(deTimer, 2000);
+}}
+</script>
+</body>
+</html>
