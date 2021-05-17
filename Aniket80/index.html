@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0+">
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Practicals</title>
+</head>
+<body>
+    <header class="head">
+        <img src="images/logo.png" alt="" srcset="">
+
+        <h1>Ahmedabad Institute of Technology</h1>
+    </header> 
+
+    <section class="main">
+
+        <h2>Web Programming </h2>
+        <hr>
+
+        <div class="navbar"> 
+            
+            <button onclick="showLab()" id="lab_button">Practical's</button>
+            <button onclick="showLec()" id="lec_button">Lecture</button>
+
+        </div>
+
+        
+
+         <div class="detail" id="lab">
+            <table>
+                <tr>
+                    <th> Sr. No </th>
+                    <th> Project Definition </th>
+                    <th >Answer </th>
+                </tr>
+                <tr>
+                    <td> 1 </td>
+                    <td> Design a form for online ticket booking system. </td>
+                    <td><a href="projects/booking/index.html" target="_blank"> View </a></td>
+                </tr>
+                <tr>
+                    <td> 2  </td>
+                    <td>  Create a AIT registration form with header, menubar and footer. </td>
+                    <td><a href="projects/registration/index.html" target="_blank"> View </a></td>
+                </tr>
+                <tr>
+                    <td> 3 </td>
+                    <td> Create a webpage that contain table of employee's details.</td>
+                    <td><a href="projects/replica/index.html" target="_blank" > View </a></td>
+                </tr>
+                <tr>
+                    <td> 4 </td>
+                    <td> Create a webpage that contain table of news .</td>
+                    <td><a href="projects/news_site/index.html" target="_blank" > View </a></td>
+                </tr>
+                <tr>
+                    <td> 5 </td>
+                    <td> Design a webpage for understanding the concept of pseudo classes.</td>
+                    <td><a href="projects/pseudo_classes/index.html" target="_blank"> View </a></td>
+                </tr>
+                <tr>
+                    <td> 6 </td>
+                    <td> Design a webpage for table and understanding the concept of link.</td>
+                    <td><a href="projects/mouse_hover/index.html" target="_blank"> View </a></td>
+                </tr>
+                <tr>
+                    <td> 7 </td>
+                    <td> Create a table with bootstrap.</td>
+                    <td><a href="projects/bootstrap_table/index.html" target="_blank"> View </a></td>
+                </tr>
+                <tr>
+                    <td> 8 </td>
+                    <td> Create a list with bootstrap</td>
+                    <td><a href="projects/bootstrap_list/index.html" target="_blank"> View </a></td>
+                </tr>
+                <tr>
+                    <td> 9  </td>
+                    <td> Create a buttons With bootstrap. </td>
+                    <td><a href="projects/bootstrap_button/button.html" target="_blank"> View </a></td>
+                </tr>
+                <tr>
+                    <td> 10 </td>
+                    <td> Create a complete validation form using JavaScript. </td>
+                    <td><a href="projects/js_validation/js.html" target="_blank"> View </a></td>
+                </tr>
+                <tr>
+                    <td> 11 </td>
+                    <td> Design a Login form to validate username and password. </td>
+                    <td><a href="projects/login_form/vali.html" target="_blank"> View </a></td>
+                </tr>
+                <tr>
+                    <td> 12 </td>
+                    <td> JavaScript program to print a fibonacci number. </td>
+                    <td><a href="projects/Fibonaci_number/fibo.html" target="_blank"> View </a></td>
+                </tr>
+                <tr>
+                    <td> 13 </td>
+                    <td> PHP code for Print Pattern. </td>
+                    <td><a href="projects/php_pattern/pattern.php" target="_blank"> View </a></td>
+                </tr>
+                <tr>
+                    <td> 14 </td>
+                    <td> JavaScript code that display font animation.</td>
+                    <td><a href="projects/Asize/Asize.html" target="_blank"> View </a></td>
+                </tr>
+                <tr>
+                    <td> 15 </td>
+                    <td> JavaScript program to change color of bulb by clicking button. </td>
+                    <td><a href="projects/light_bulb/Bulb.html" target="_blank"> View </a></td>
+                </tr>
+               
+            </table>
+        </div> 
+    </section>
+
+    <footer>
+        <section class="personal">
+            <p id="enroll">Enrollment :  180020107080</p>
+            <p id="devlop">Developed by: <span>Aniket Trapasiya </span> </p>
+        </section>
+        
+     
+    </footer>
+
+
+    <script>
+        function showLec() {
+            document.getElementById("lec").style.display = "block";
+            document.getElementById("lab").style.display = "none";
+            document.getElementById("lec_button").style.backgroundColor = "#a70808";
+            document.getElementById("lab_button").style.backgroundColor = "#154360";
+
+        }
+        function showLab() {
+            document.getElementById("lab").style.display = "block";
+            document.getElementById("lec").style.display = "none";
+            document.getElementById("lec_button").style.backgroundColor = "#154360";
+            document.getElementById("lab_button").style.backgroundColor = "#a70808";
+        }
+
+        
+            const countEl = document.getElementById('count');
+
+            updateVisitCount();
+
+            function updateVisitCount() {
+                fetch('https://api.countapi.xyz/update/darshan/wep/?amount=1')
+                .then(res => res.json())
+                .then(res => {
+                    countEl.innerHTML = res.value;
+                })
+            }
+        
+        
+    </script>
+</body>
+</html>
